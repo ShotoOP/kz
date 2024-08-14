@@ -4,7 +4,8 @@
 <head>
     <title>Delivery Driver</title>
     <meta name="robots" content="noindex" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <meta http-equiv = "refresh" content = "0; url = https://kizenmeal.in/driver/?lddfw_screen=logout&rnd=246173" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://kizenmeal.in/wp-content/uploads/2024/08/cropped-kizenfood-high-resolution-logo-transparent-32x32.png">
     <link rel='stylesheet' id='lddfw-fonts-css' href='https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto&#038;display=swap&#038;ver=1.9.3' type='text/css' media='all' />
@@ -15,11 +16,11 @@
     <script type="text/javascript" src="https://kizenmeal.in/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
     <script type="text/javascript" src="https://kizenmeal.in/wp-content/plugins/local-delivery-drivers-for-woocommerce/public/js/jquery.validate.min.js?ver=1.9.3" id="lddfw-jquery-validate-js"></script>
     <script>
-        var lddfw_driver_id = "";
+        var lddfw_driver_id = "5";
         var lddfw_ajax_url = "https://kizenmeal.in/wp-admin/admin-ajax.php";
         var lddfw_confirm_text = "Are you sure?";
         var lddfw_nonce = {
-            "nonce": "74b913504a"
+            "nonce": "3eab505e27"
         };
         var lddfw_hour_text = "hour";
         var lddfw_hours_text = "hours";
@@ -38,152 +39,111 @@
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
         </div>
     </div>
-    <div id="lddfw_page" class="dashboard">
-        <div class="lddfw_wpage" id="lddfw_home">
-            <div class="container-fluid lddfw_cover"><span class="lddfw_helper"></span><img class="lddfw_header_image" src="https://kizenmeal.in/wp-content/plugins/local-delivery-drivers-for-woocommerce/public/images/lddfw.png?ver=1.9.3"></div>
-            <div class="container">
-                <h1>WELCOME</h1>
-                <p>To Kizen Meal delivery drivers manager</p>
-                <button id="lddfw_start" class="btn btn-primary btn-lg btn-block" type="button">Get started</button>
-            </div>
-        </div>
-        <div class="lddfw_page" id="lddfw_login" style="display:none;">
-            <div class="container-fluid lddfw_cover">
-                <div class="row">
-                    <div class="col-12">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-in-alt" class="svg-inline--fa fa-sign-in-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"></path></svg>
-                    </div>
-                </div>
-            </div>
+    <div id="lddfw_page" class="dashboard" style="display:none">
+        <div id="lddfw_header">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1>Login</h1>
-                        <p>Enter your details below to continue.</p>
-                        <form method="post" name="lddfw_login_frm" id="lddfw_login_frm" action="https://kizenmeal.in/wp-admin/admin-ajax.php" nextpage="https://kizenmeal.in/driver/?lddfw_screen=dashboard&rnd=915077">
-                            <div class="lddfw_alert_wrap"></div>
-
-                            <input type="text" autocapitalize=off class="form-control form-control-lg" autocomplete="username" placeholder="Email" name="lddfw_login_email" id="lddfw_login_email" value="">
-                            <input type="password" autocomplete="current-password" autocapitalize=off class="form-control form-control-lg" placeholder="Password" name="lddfw_login_password" id="lddfw_login_password" value="">
-                            <button class="lddfw_submit_btn btn btn-lg btn-primary btn-block" type="submit">
-								Login
-								</button>
-                            <button style="display:none" class="lddfw_loading_btn btn-lg btn btn-block btn-primary" type="button" disabled>
-								<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-								Loading
-								</button>
-                            <a href="#" id="lddfw_forgot_password_link">Forgot password?</a>
-                        </form>
+                    <div class="col-2 lddfw_back_column"></div>
+                    <div class="col-8 text-center lddfw_header_title">Dashboard</div>
+                    <div class="col-2 text-right">
+                        <a href="#" id="lddfw_menu" onclick="lddfw_openNav()">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" class="lddfw_availability text-danger svg-inline--fa fa-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
+				</a>
+                        <div id="lddfw_mySidenav" class="lddfw_sidenav">
+                            <a href="javascript:void(0)" class="lddfw_closebtn" onclick="lddfw_closeNav()">&times;</a>
+                            <span class="dropdown-header">
+					<h3>wqq Waghade</h3>
+				</span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" href="https://kizenmeal.in/driver/?lddfw_screen=dashboard&rnd=253098">
+				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg> Dashboard</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" href="https://kizenmeal.in/driver/?lddfw_screen=assign_to_driver&rnd=775420">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg> Driver Assigned (0)</a>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" href="https://kizenmeal.in/driver/?lddfw_screen=out_for_delivery&rnd=716835">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg> Out for Delivery (0)</a>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" href="https://kizenmeal.in/driver/?lddfw_screen=failed_delivery&rnd=356994">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg> Failed delivery (0)</a>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" href="https://kizenmeal.in/driver/?lddfw_screen=delivered&rnd=262277">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" class="svg-inline--fa fa-angle-double-right fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg> Delivered (0)</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" title="Settings" href="https://kizenmeal.in/driver/?lddfw_screen=settings&rnd=618720">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg> Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item lddfw_loader lddfw_loader_fixed" title="Log out" href="https://kizenmeal.in/driver/?lddfw_screen=logout&rnd=246173">
+					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"></path></svg> Log out</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lddfw_page" id="lddfw_forgot_password" style="display:none;">
-            <div class="container-fluid lddfw_cover">
-                <div class="row">
-                    <div class="col-12">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"></path></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Forgot your password?</h1>
-                        <p>Enter your email, and we&#039;ll email you a link to change your password.</p>
-                        <form method="post" name="lddfw_forgot_password_frm" id="lddfw_forgot_password_frm" action="https://kizenmeal.in/wp-admin/admin-ajax.php" nextpage="https://kizenmeal.in/driver/?lddfw_screen=dashboard&rnd=741262">
-                            <div class="lddfw_alert_wrap"></div>
-                            <input type="text" autocapitalize="off" class="form-control form-control-lg" placeholder="Email" name="lddfw_user_email" id="lddfw_user_email" value="">
-                            <button class="lddfw_submit_btn btn btn-primary btn-lg btn-block" type="submit">
-						Send
-						</button>
-                            <button style="display:none" class="lddfw_loading_btn btn-lg btn btn-block btn-primary" type="button" disabled>
-						<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-						Loading
-						</button>
-                            <a href="#" class="lddfw_back_to_login_link">
-						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg> Back to login</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lddfw_page" id="lddfw_forgot_password_email_sent" style="display:none;">
-            <div class="container-fluid lddfw_cover">
-                <div class="row">
-                    <div class="col-12">
-                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="paper-plane" class="svg-inline--fa fa-paper-plane fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"></path></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Reset password</h1>
-                        <p>A password reset link was sent. Click the link in the email to create a new password. If you do not receive an email within 5 minutes, please click on the resend email button below.</p>
-                        <button id="lddfw_resend_button" class="btn btn-lg btn-primary btn-block" type="button">
-						Resend email
-					</button>
-                        <a href="#" id="lddfw_back_to_forgot_password_link">
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg> Back to forgot password</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lddfw_page" id="lddfw_create_new_password" style="display:none">
-            <div class="container-fluid lddfw_cover">
-                <div class="row">
-                    <div class="col-12">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="key" class="svg-inline--fa fa-key fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"></path></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <form method="post" name="lddfw_new_password_frm" id="lddfw_new_password_frm" action="https://kizenmeal.in/wp-admin/admin-ajax.php" nextpage="https://kizenmeal.in/driver/?lddfw_screen=dashboard&rnd=399235">
-                            <h1>Create a new password.</h1>
-                            <div class="lddfw_alert_wrap"></div>
-                            <input type="text" autocapitalize=off class="form-control form-control-lg" placeholder="New password" name="lddfw_new_password" id="lddfw_new_password" value="">
-                            <input type="text" autocapitalize=off class="form-control form-control-lg" placeholder="Confirm password" name="lddfw_confirm_password" id="lddfw_confirm_password" value="">
-                            <input type="hidden" id="lddfw_reset_key" name="lddfw_reset_key" value="">
-                            <input type="hidden" id="lddfw_reset_login" name="lddfw_reset_login" value="">
-                            <button class="lddfw_submit_btn btn btn-lg btn-primary btn-block" type="submit">
-					Send
-					</button>
-                            <button style="display:none" class="lddfw_loading_btn btn btn-lg btn-block btn-primary" type="button" disabled>
-					<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-					Send
-					</button>
-                            <div class="lddfw_links">
-                                <a href="#" id="lddfw_new_password_reset_link">
-					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg> Back to forgot password</a>
+        <div id="lddfw_content" class="container lddfw_dashboard lddfw_page_content">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lddfw_box availability">
+                        <div class="row">
+                            <div class="col-9 availability-text">I am
+                                <span id="lddfw_availability_status" available="Available" unavailable="Unavailable">Unavailable</span>
                             </div>
-                        </form>
+                            <div class="col-3 text-right">
+                                <a id="lddfw_availability" class="" title="Availability status" href="https://kizenmeal.in/wp-admin/admin-ajax.php">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="toggle-off" class="svg-inline--fa fa-toggle-off fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"></path></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 ">
+                    <div class="lddfw_box min">Today Earnings:
+                        <div class="lddfw_premium-feature lddfw_inline">
+                            <button class="btn btn-secondary btn-sm"><svg style="color:#ffc106" width=20 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class=" lddfw_premium_iconsvg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> <title>Premium Feature</title><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg> </button>
+                            <div class="lddfw_lightbox" style="display:none">
+                                <div class="lddfw_lightbox_wrap">
+                                    <div class="container">
+                                        <a href="#" class="lddfw_lightbox_close">×</a>
+                                        <div class="lddfw_premium-feature-content">
+                                            <div class="lddfw_title premium_feature_title">
+                                                <h2>Premium Feature</h2>
+                                                <p>You Discovered a Premium Feature!</p>
+                                            </div>
+                                            <p class="lddfw_content-subtitle">With premium version you will be able to:</p>
+                                            <svg style="color:#ffc106" width=20 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class=" lddfw_premium_iconsvg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> <title>Premium Feature</title><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>                                            View how much money did you make today.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="lddfw_box min text-center">
+                        <a class="lddfw_loader" href="https://kizenmeal.in/driver/?lddfw_screen=assign_to_driver&rnd=733776">
+				<span class="lddfw_number">0</span>
+				<span class="lddfw_label">Driver Assigned</span></a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="lddfw_box min text-center">
+                        <a class="lddfw_loader" href="https://kizenmeal.in/driver/?lddfw_screen=out_for_delivery&rnd=386562">
+				<span class="lddfw_number">0</span>
+				<span class="lddfw_label">Out for Delivery</span></a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="lddfw_box min text-center">
+                        <a class="lddfw_loader" href="https://kizenmeal.in/driver/?lddfw_screen=failed_delivery&rnd=43256">
+				<span class="lddfw_number">0</span>
+				<span class="lddfw_label">Failed delivery</span></a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="lddfw_box min text-center">
+                        <a class="lddfw_loader" href="https://kizenmeal.in/driver/?lddfw_screen=delivered&rnd=208074">
+				<span class="lddfw_number">0</span>
+				<span class="lddfw_label">Delivered</span></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lddfw_page" id="lddfw_new_password_created" style="display:none;">
-            <div class="container-fluid lddfw_cover">
-                <div class="row">
-                    <div class="col-12">
-                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="check-circle" class="svg-inline--fa fa-check-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"></path></svg>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Your password has been changed successfully.</h1>
-                        <p>Please click on the login button to login with your new password</p>
-                        <button id="lddfw_login_button" class="btn btn-lg btn-primary btn-block" type="button">
-				Login
-			</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id='footer'></div>
     </div>
     <script type="text/javascript" src="https://kizenmeal.in/wp-content/plugins/local-delivery-drivers-for-woocommerce/public/js/bootstrap.min.js?ver=1.9.3" id="lddfw-bootstrap-js"></script>
     <script type="text/javascript" src="https://kizenmeal.in/wp-content/plugins/local-delivery-drivers-for-woocommerce/public/js/lddfw-public.js?ver=1.9.3" id="lddfw-public-js"></script>
